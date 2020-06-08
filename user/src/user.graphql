@@ -1,0 +1,10 @@
+type User @key(fields: "id") {
+
+    """{"normal":"","cancel":""}"""
+    id: ID!
+    name: String!
+}
+
+extend type Query {
+  getUser(id: ID!): User
+}
